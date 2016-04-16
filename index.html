@@ -57,7 +57,7 @@
 					<li><a href="contactus.html"><i class="fa fa-envelope-o"></i> Contact</a></li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
-          <li><a role="button" data-toggle="modal" data-target="#loginModal">
+          <li><a role="button" onclick="modalLogin();">
           <span class="glyphicon glyphicon-log-in"></span> Login</a>
           </li>
         </ul>
@@ -113,8 +113,7 @@ creations will tickle your culinary senses!</p>
 				</div>
 				<div class="col-xs-12 col-sm-2" >
 					<p style="padding: 40px;"></p>
-					<a href="#reserve_table_formid" class="btn btn-warning btn-block" style="color: white; font-weight: bold;"
-						data-toggle="modal" data-target="#reserveTableModal">
+					<a href="#reserve_table_formid" class="btn btn-warning btn-block" style="color: white; font-weight: bold;" onclick="modalReserve();">
 					Reserve Table
 					</a>
 				</div>
@@ -384,7 +383,13 @@ fusion experiences. </p>
 			$("#carousel-play").click(function(){
 				$("#mycarousel").carousel("cycle");
 			});
-		})
+		});
+		function modalReserve() {
+			$("#reserveTableModal").modal("show");
+		}
+		function modalLogin() {
+			$("#loginModal").modal("show");
+		}
 	</script>
 </body>
 </html>
